@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-function CarCard() {
+function CarCard({ img, name, desc }) {
   return (
-    <div>
-      <p>Car Name</p>
+    <div className="car-card">
+
+      <h2 className="card-name">{name}</h2>
+      <p className="card-desc">{desc}</p>
+      <button className="rent-btn">Rent Now</button>
     </div>
-  )
+  );
 }
 
-export default CarCard
+export default CarCard;

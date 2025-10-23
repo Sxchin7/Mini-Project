@@ -1,16 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import CarCard from './components/CarCard.jsx';
+import carData from './data/carDetails.js';
 
 function App() {
-  
-
   return (
-    <>
-      <h1>Car Rental</h1>
-    </>
-  )
+    <div className="car-container">
+      {carData.map((car) => (
+        <CarCard
+          key={car.id}
+          img={car.img}
+          name={car.name}
+          desc={car.desc}
+        />
+      ))}
+    </div>
+  );
 }
 
-export default App
+export default App;
